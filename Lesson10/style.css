@@ -1,0 +1,184 @@
+body{
+    background: rgba(11, 11, 54, 0.301);
+}
+#navbar{
+    list-style-type: none;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+ul {                             
+    text-align: left;                   
+    list-style: none;                   
+    }
+    
+ul li {                                
+    font: bold 12px/18px sans-serif; 
+    display: inline-block;             
+    position: relative;                  
+    padding: 15px 20px;          
+    cursor: pointer;    
+}
+
+ul li:hover {                        
+    background: rgba(85, 85, 85, 0.555); 
+    display: block;          
+}
+
+ul li ul {
+    padding: 0;        
+    position: absolute;
+    top: 48px;      
+    left: -10000px;
+    width: 150px;
+}
+
+   
+ul li:hover ul {                 
+    display: block;              
+    left : 0px;   
+    background-color: rgba(226, 128, 17, 0.548);
+    border: 2px solid black;     
+}
+       
+#nav-list{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(57, 58, 66, 0.89);
+    border: 2px solid black;
+    color: white;
+    width: 100%;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr) 100px;
+  grid-template-rows: 100px 200px 220px 1fr 100px;
+}
+
+.section0{
+    border: 2px solid black;
+    grid-column: 2/5;
+    grid-row: 2/3;
+    background-image: url("../Lesson10/images/section0.jpeg");
+}
+
+.section0 p{
+    text-align: justify;
+    color: white;
+    margin: 0 15%;
+    background-image: url("../Lesson10/images/footer.jpeg");
+    padding: 20px;
+}
+
+.container h3,p{
+    text-align: justify;
+    margin: 20px;
+}
+.section1{
+  border: 2px solid black;
+  grid-column: 2/3;  
+  grid-row: 3/4;
+}
+.section1img{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.section2{
+  border: 2px solid black;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.section2img{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+.section3{
+  border: 2px solid black;
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.section3img{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.header{
+  grid-column: 1/6;
+  background:url("../Lesson10/images/footer.jpeg");
+  color: white;
+}
+
+.footer{
+  color: white;
+  grid-column: 1/7;
+  grid-row: 5/6;
+  background-image: url("../Lesson10/images/footer.jpeg");
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 500px){
+
+    body{
+        background:white;
+        margin: auto;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .section0{
+        grid-row: 2/3;
+        grid-column: 1/6;
+    }
+    .section0 p{
+        display: none;
+    }
+    .section1{
+        grid-column: 1/6;
+        grid-row: 3/4;
+    }
+    .section2{
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+    .section2img{
+        grid-column: 1/6;
+        grid-row: 5/6;
+    }
+    .section3{
+        grid-column: 1/6;
+        grid-row: 5/6;
+    }
+    .section3img{
+        grid-column: 1/6;
+        grid-row: 6/7;
+    }
+    .section1img{
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+    .container{
+        margin: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 100px repeat(3, 160px) 100px;
+      }
+      img{
+          display: none;
+          width: 50%;
+          height: 75%;
+          align-items: center;
+      }
+      .footer{
+        grid-column: 1/6;
+        grid-row: 6/7;
+        border: 2px solid black;
+      }
+}
